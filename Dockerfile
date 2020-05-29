@@ -12,4 +12,6 @@ COPY ./src .
 
 RUN go build
 
+EXPOSE 8081
+
 CMD ["./src"]

@@ -1,0 +1,18 @@
+language: generic
+
+sudo: required
+
+services:
+  - docker
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-south-1"
+  app: "sample-go-app"
+  env: "SampleGoApp-env"
+  bucket_name: "https://medium.com/avmconsulting-blog/how-to-deploy-a-node-app-on-aws-elastic-beanstalk-with-docker-9664e5841fe"
+  bucket_path: "sample-go-app"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_key_id: $AWS_SECRET_KEY
